@@ -50,8 +50,10 @@ img{
 .container{
     background-color: hsl(189, 41%, 97%);
     padding: 2em;
-    width: 100%;
+    width: 95%;
     border-radius: 1rem;
+    margin-inline: auto ;
+    box-shadow: 0 4px 8px 0 rgba(99, 99, 99, 0.2), 0 6px 20px 0 rgba(185, 185, 185, 0.19);
 }
 
 form{
@@ -130,10 +132,12 @@ label{
     margin-top: 2em;
     border-radius: 1rem;
     font-weight: bold;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     
 }
-.result > p{ color: white;}
+.result > p{ color: white; }
 .result > span { color: hsl(186, 14%, 43%); font-size: 14px;}
 .result > h2{ 
     color:hsl(172, 67%, 45%); 
@@ -146,7 +150,7 @@ label{
     border: none;
     border-radius: 5px;
     padding: .4em;
-    margin-top: 1em;
+    margin-top: 2em;
     text-transform: uppercase;
     
 }
@@ -159,14 +163,37 @@ button:hover{
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color:hsl(183, 100%, 15%); }
 
-/*@media only screen and (min-width: 600px){
+@media only screen and (min-width: 900px){
+    .container{
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        padding-inline: 1em;
+        padding-top: 0;
+    }
+    form{
+        width: 50%;
+        margin-top: 2em;
+    }
+    .result{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 45%;
+    }
+    .result > button{
+        padding: 0;
+    }
+    .result > h2{
+        margin-top: -3em;
+    }
+    .tip-options{
+        grid-template-columns: 32% 32% 32%;
+    }
     img{
         width: 50px;
         padding: 0;
         margin: 2em auto;
     }
-    main{
-        display: flex;
-    }
     
-}*/
+    
+}
